@@ -20,9 +20,9 @@ const Ninja = ({ ninjas }) => {
                 <title> Ninjas List | Home </title>
                 <meta name="keywords" content="ninjas site list home" />
             </Head>
-            <h1>Ninja Repertory</h1>
+            <h2>Ninjas Repertory</h2>
             {ninjas.map(ninja => (
-                <Link key={ninja.id} href={"/ninjas/" + ninja.id }>
+                <Link key={ninja.id} href={"/ninjas/" + ninja.id}>
                     <a className={styles.single} >
                         <h3><span>{ninja.id}</span> - {ninja.name}</h3>
                         {/* {console.log(ninja)} */}
