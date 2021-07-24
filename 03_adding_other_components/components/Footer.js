@@ -1,4 +1,5 @@
 
+// New !
 const Footer = () => {
     return (
         <div className="logo">
