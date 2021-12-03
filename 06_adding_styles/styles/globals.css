@@ -1,5 +1,8 @@
-/*
+/* Style applied from _app.js main component to all other pages, not component.
+For component, use .module.css
+==================================================================== */
 
+/*
 html,
 body {
   padding: 0;
@@ -25,35 +28,51 @@ a:hover{
 } 
 */
 
-
+#__next {
+  height: 100vh;
+}
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 
 body {
   background: #f2f2f2;
   color: #333;
   font-family: "Nunito";
+  min-width: none;
 }
+
 a {
   color: #333;
   text-decoration: none;
 }
+
 .content {
   max-width: 960px;
   margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; 
 }
+
 nav {
-  margin: 10px auto 80px;
+  margin-top: 10px;
+  margin-bottom: 40px;
   padding: 10px 0;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #ddd;
 }
+
 nav a {
   margin-left: 12px;
 }
+
 nav .logo {
   margin-right: auto;
+}
+
+main {
+  flex: 1;
 }
 
 footer {
@@ -63,4 +82,16 @@ footer {
   margin-top: 60px;
   color: #777;
   border-top: 1px solid #eaeaea;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  h1 {
+    text-align: center;
+    margin: auto;
+  }
+
 }

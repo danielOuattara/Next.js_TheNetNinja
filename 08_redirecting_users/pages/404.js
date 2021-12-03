@@ -2,16 +2,16 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-const NotFound = () => {
 
+
+const NotFound = () => {
     const router = useRouter();
-    console.log(router);
+    console.log('router =', router);
 
     useEffect( () => {
         console.log("useEffect Run !");
-        console.log()
         setTimeout(() => {
-            // router.go(1)
+            // router.go(-1)
             router.push("/")
 
         },3000)

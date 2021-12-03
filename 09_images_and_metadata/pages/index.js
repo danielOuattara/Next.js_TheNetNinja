@@ -1,13 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-// import Navbar from '../components/NavBar';
-// import Footer from '../components/Footer';
 import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title> Ninja List | Home </title>
         <meta name="keywords" content="ninjas site and list" />
@@ -19,6 +17,6 @@ export default function Home() {
       <Link href="/ninjas">
         <a className={styles.btn} >See Ninjna Listing</a>
       </Link>
-    </div>
-  )
+    </>
+  );
 }

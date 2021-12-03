@@ -8,7 +8,7 @@ const Layout = ({children}) => {
             {children}
             <Footer/>
         </div>
-      );
+    );
 }
  
 export default Layout;

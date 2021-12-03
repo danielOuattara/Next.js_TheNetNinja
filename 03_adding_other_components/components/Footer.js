@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
         <div className="logo">
-            <h4> Footer - Copyright 2021 Ninja List</h4>
+            <h4> Footer - Copyright {new Date().getFullYear()} Ninja List</h4>
         </div>
     );
 }
