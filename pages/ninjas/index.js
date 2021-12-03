@@ -5,7 +5,6 @@ import Link from "next/link";
 export const getStaticProps = async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await res.json();
-    console.log(data);
     return {
         props: { ninjas: data }
     }
@@ -25,12 +24,10 @@ const Ninja = ({ ninjas }) => {
                 <Link key={ninja.id} href={"/ninjas/" + ninja.id}>
                     <a className={styles.single} >
                         <h3><span>{ninja.id}</span> - {ninja.name}</h3>
-                        {/* {console.log(ninja)} */}
                     </a>
                 </Link>
             ))}
         </div>
     );
 }
-
 export default Ninja;
