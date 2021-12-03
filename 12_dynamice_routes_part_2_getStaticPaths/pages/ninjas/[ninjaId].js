@@ -4,26 +4,27 @@ import { useRouter} from "next/router";
 // NOTE: Below is commented until next video tutorial
 // ---------------------------------------------------
 
-// export const getStaticPaths = async () => {
-//     const res = await fetch("https://jsonplaceholder.typicode.com/users");
-//     const data = await res.json();
+export const getStaticPaths = async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await res.json();
+    // console.log("data =", data)
 
-//     const paths = data.map(ninja => {
-//         return {
-//             params: { id: ninja.id.toString()}
-//         };
-//     })
+    const paths = data.map(ninja => {
+        return {
+            params: { id: ninja.id.toString()}
+        };
+    })
 
-//     console.log("paths =", paths)
+    console.log("paths =", paths)
 
-//     return { 
-//         paths: paths,
-//         fallback: false,
-//     };
-// }
+    return { 
+        paths,
+        fallback: false,
+    };
+}
 
 
-const Ninja = () => {
+const NinjaDetails = () => {
 
     const router = useRouter();
     console.log("router =", router);
@@ -32,8 +33,7 @@ const Ninja = () => {
         <div>
             <h1>Details on ninja : {ninjaId}</h1>
         </div>
-
     );
 }
 
-export default Ninja;
+export default NinjaDetails;
