@@ -1,15 +1,16 @@
-
-/* Style for components  class only style
-=========================*/
+/* Style for components class only style
+-----------------------------------------*/
 
 .title {
   color: #333;
   padding-bottom: 20px;
   text-align: center;
 }
+
 .text {
   color: #777;
 }
+
 .btn {
   display: block;
   width: 150px;

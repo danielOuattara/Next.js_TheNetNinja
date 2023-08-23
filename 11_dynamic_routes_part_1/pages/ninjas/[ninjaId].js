@@ -1,16 +1,14 @@
 import { useRouter } from "next/router";
 
-const Ninja = () => {
+const NinjaDetails = () => {
+  const router = useRouter();
+  console.log("router =", router);
+  const ninjaId = router.query.ninjaId;
+  return (
+    <div>
+      <h1>Details page on ninja : {ninjaId}</h1>
+    </div>
+  );
+};
 
-    const router = useRouter();
-    console.log("router =", router);
-    const ninjaId = router.query.ninjaId;
-    return (
-        <div>
-            <h1>Details on ninja : {ninjaId}</h1>
-        </div>
-
-    );
-}
-
-export default Ninja;
+export default NinjaDetails;
